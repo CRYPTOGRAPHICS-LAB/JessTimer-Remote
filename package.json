@@ -1,0 +1,27 @@
+{
+	"name": "companion-module-cryptographics-jesstimer-remote",
+	"version": "1.0.1",
+	"type": "module",
+	"main": "src/index.js",
+	"license": "MIT",
+	"description": "Bitfocus Companion module for JessTimer, a stage timer built in Unreal Engine 5",
+	"scripts": {
+		"dev": "node tools/mock-jesstimer.mjs",
+		"listen": "node tools/listen.mjs",
+		"check": "node tools/check.mjs",
+		"e2e": "node tools/e2e.mjs",
+		"test": "node tools/check.mjs && node tools/e2e.mjs",
+		"module-check": "companion-module-check",
+		"build": "companion-module-build",
+		"release-check": "node tools/check.mjs && node tools/e2e.mjs && companion-module-check && companion-module-build"
+	},
+	"dependencies": {
+		"@companion-module/base": "~1.13.6"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^2.7.2"
+	},
+	"engines": {
+		"node": ">=22.8"
+	}
+}
