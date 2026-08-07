@@ -1,7 +1,7 @@
 # companion-module-jesstimer
 
-A Bitfocus Companion module for **JessTimer**, a stage timer built in Unreal
-Engine 5.5.4.
+A Bitfocus Companion module for **JessTimer**, a whimsical yet feature-rich stage timer built in Unreal
+Engine.
 
 Replaces the hand-built Generic-OSC page: drag presets onto an empty page and
 you have a working, bi-directional timer surface with no custom variables to
