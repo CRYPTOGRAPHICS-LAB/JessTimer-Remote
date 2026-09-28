@@ -1,0 +1,35 @@
+{
+	"id": "cryptographics-jesstimer-remote",
+	"name": "cryptographics-jesstimer-remote",
+	"shortname": "JessTimer Remote",
+	"description": "Bi-directional control and status for JessTimer (version 4 or later), a stage timer built in Unreal Engine 5. Ships a complete 8x4 Stream Deck XL preset page.",
+	"version": "2.0.0",
+	"license": "MIT",
+	"repository": "https://github.com/bitfocus/companion-module-cryptographics-jesstimer-remote.git",
+	"bugs": "https://github.com/bitfocus/companion-module-cryptographics-jesstimer-remote/issues",
+	"maintainers": [
+		{
+			"name": "CRYPTOGRAPHICS"
+		}
+	],
+	"legacyIds": [
+		"jesstimer"
+	],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "1.13.0",
+		"entrypoint": "../src/index.js"
+	},
+	"manufacturer": "CRYPTOGRAPHICS",
+	"products": [
+		"JessTimer"
+	],
+	"keywords": [
+		"Timer",
+		"Stage Timer",
+		"Countdown",
+		"OSC",
+		"Unreal Engine"
+	]
+}

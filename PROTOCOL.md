@@ -1,14 +1,14 @@
-# JessTimer ↔ Companion OSC Protocol v1
+# JessTimer ↔ Companion OSC Protocol v2.0.0
 
-This is the contract between **JessTimer** (Unreal Engine 5.5.4) and the
-**companion-module-jesstimer** Companion module.
+This is the contract between **JessTimer** (version 4 or later, Unreal Engine 5.5.4) and the
+**companion-module-jesstimer** Companion module (v2.0.0+).
+
+> **Compatibility:** Module v2.0.0 requires **JessTimer 4 or later**.
 
 There are two independent directions, and they are deliberately asymmetric:
 
-- **Companion → JessTimer** is **unchanged**. Every address and payload below is
-  exactly what your existing page-1 buttons already send. No UE5 work required.
-- **JessTimer → Companion** is **new**. This is the only side that needs edits,
-  and for the most part it is a find-replace on address string literals.
+- **Companion → JessTimer** is the command channel.
+- **JessTimer → Companion** is the status announcement channel.
 
 ---
 
@@ -35,6 +35,16 @@ Sent as three messages in immediate succession.
 | `/Hours`    | `i` hours   | 0–99  |
 | `/Minutes`  | `i` minutes | 0–59  |
 | `/Seconds`  | `i` seconds | 0–59  |
+
+### End time of day (v2.0.0 — requires JessTimer 4 or later)
+
+Sets the timer to count down to a specific time of day.
+
+| Address          | Args                   | Notes                                                    |
+|------------------|------------------------|----------------------------------------------------------|
+| `/EndTimeOfDay`  | `i` seconds past 00:00 | Number of seconds past 12:00AM/00:00 (range 0–86400)      |
+
+The module accepts 24-hour time notation (e.g. `"08:30"`, `"20:00"`, `"08:30:00"`) as well as raw seconds past midnight (e.g. `"72000"`), and converts it to integer seconds past midnight before sending. Variables are supported.
 
 ### Relative time adjust
 

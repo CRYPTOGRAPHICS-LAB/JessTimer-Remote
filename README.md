@@ -1,20 +1,23 @@
-# companion-module-jesstimer
+# companion-module-jesstimer (v2.0.0)
 
-A Bitfocus Companion module for **JessTimer**, a whimsical yet feature-rich stage timer built in Unreal
-Engine.
+A Bitfocus Companion module for **JessTimer**, a stage timer built in Unreal
+Engine 5.5.4.
+
+> **Compatibility Notice:** Module version 2.0.0+ only works with **JessTimer 4 or later**.
 
 Replaces the hand-built Generic-OSC page: drag presets onto an empty page and
 you have a working, bi-directional timer surface with no custom variables to
 create and no grid positions to hard-code.
 
-- **Commands out** — transport, absolute and relative time, warp, end action,
+- **Commands out** — transport, absolute and relative time, end time of day (24h or raw seconds), warp, end action,
   count-up, fullscreen
 - **Status in** — countdown, warp coefficient, run state, end action, count-up,
   fullscreen, plus online/offline derived from a message watchdog
-- **Presets** — the original 8×4 Stream Deck XL page, artwork included
+- **Presets** — the original 8×4 Stream Deck XL page, artwork included, plus extras
 
 ## Requirements
 
+- **JessTimer 4 or later** (for modern bi-directional OSC protocol and `/EndTimeOfDay` endpoint)
 - Bitfocus Companion 4.1 or newer
 - Node 22 (bundled with Companion; only needed separately for the dev tools)
 
