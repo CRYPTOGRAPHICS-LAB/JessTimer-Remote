@@ -1,4 +1,4 @@
-# companion-module-jesstimer (v2.0.0)
+# companion-module-jesstimer (v2.0.1)
 
 A Bitfocus Companion module for **JessTimer**, a stage timer built in Unreal
 Engine 5.5.4.
