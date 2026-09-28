@@ -193,7 +193,7 @@ export function getPresetDefinitions() {
 
 	extra(
 		'end_time_of_day',
-		'Set end time of day (24hr, e.g. 08:30)',
+		'Set to end by time-of-day (e.g. 08:30)',
 		{ text: 'END AT\\n08:30', size: '14', color: WHITE, bgcolor: BLACK },
 		[{ down: [act('set_end_time_of_day', { time: '08:30' })], up: [] }],
 	)

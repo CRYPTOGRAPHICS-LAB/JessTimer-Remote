@@ -123,21 +123,14 @@ export function getActionDefinitions(self) {
 		},
 
 		set_end_time_of_day: {
-			name: 'Time: Set end time of day',
-			description:
-				'Set countdown to end at a specific time of day (JessTimer 4+). ' +
-				'Accepts 24hr format (e.g. "08:30", "20:00") or raw seconds past midnight (e.g. "72000"). ' +
-				'Converts to seconds past 00:00 and sends /EndTimeOfDay. Fields accept variables.',
+			name: 'Time: Set to end by time-of-day',
 			options: [
 				{
 					type: 'textinput',
 					id: 'time',
-					label: 'End time of day (24h "00:00" or raw seconds)',
+					label: '24hr time (e.g. 08:30) or raw seconds past midnight',
 					default: '08:30',
 					useVariables: true,
-					tooltip:
-						'Enter 24h format (e.g. "08:30", "20:00") or raw seconds past 00:00 (e.g. "72000"). ' +
-						'Requires JessTimer 4 or later. Accepts variables.',
 				},
 			],
 			callback: async (action, context) => {
